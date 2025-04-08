@@ -1,0 +1,58 @@
+.py-base {
+  padding-block: var(--py-base);
+}
+
+.py-lg {
+  padding-block: var(--py-lg);
+}
+
+.py-xl {
+  padding-block: var(--py-xl);
+}
+
+.px-large {
+  padding-inline: var(--px-lg);
+}
+
+.container {
+  --max-width: 375px;
+  width: min(var(--max-width), 100% - var(--px-lg) * 2);
+}
+
+/* Utilizando a metodologia de mobile first utilizamos essa 
+classe utilitaria para que X coisa apareça apenas em
+desktops, e suma em mobiles. */
+.desktop-only {
+  display: none;
+}
+
+/* Classe utilizada para que o posicionamento do elemento 
+  em telas menores seja feito um abaixo do outro, enquanto 
+  no desktop sera feito um ao lado do outro. */
+.even-cols {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (width >= 80em) {
+  .container {
+    --max-width: 80rem;
+  }
+
+  .desktop-only {
+    display: initial;
+  }
+
+  .even-cols {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
