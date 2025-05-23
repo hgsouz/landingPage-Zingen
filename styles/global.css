@@ -100,6 +100,11 @@ ul[role="list"] {
   list-style: none;
 }
 
+img {
+  max-width: 100%;
+  display: inline-block;
+}
+
 /* Ao uitilizar o media nós indentificamos o tamanho da tela para assim fazer
 modificações de acordo com cada dispositivo. Neste caso foi feita uma mudança da
 variavel para deixar as fontes maiores em desktops maiores ou iguais a 1280px */
